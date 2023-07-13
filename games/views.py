@@ -21,7 +21,7 @@ def games_index(request):
 
 # setup for details view
 def games_detail(request):    #need game_id in parameters as well
-    return render(request, 'games/detail.htmm')
+    return render(request, 'games/detail.html')
     # requestedGame = Game.objects.get(id=game_id)
     # return render(request, 'games/detail.html', {
     #     'game': requestedGame
