@@ -1,7 +1,30 @@
 from django.shortcuts import render
 
 # Create your views here.
+#from .models import Game
+# from django.views.generic.edit import CreateView, UpdateView, DeleteView
+# from django.views.generic import ListView, DetailView
+# from .models import Game
 
+# class GameCreate(CreateView):
+#     model = GameCreate
+#     fields = '__all__'
+
+# class GameUpdate(UpdateView):
+#     model = GameUpdate
+#     fields = [fields to be updated]
+
+# class GameDelete(DeleteView):
+#     model = Game
+#     success_url = '/games'
+
+# class GameList(ListView):
+#     model = Game
+#     context_object_name = 'games'
+
+# class GameDetail(DetailView):
+#     model = Game
+#     context_object_name = 'game'
 
 def home(request):
 
@@ -11,18 +34,4 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-#setup for index view
-def games_index(request):
-    return render(request, 'games/index.html')
-    # videogames = Game.objects.all()
-    # return render(request, 'games/index.html', {
-    #     'games': videogames
-    # })
 
-# setup for details view
-def games_detail(request):    #need game_id in parameters as well
-    return render(request, 'games/detail.html')
-    # requestedGame = Game.objects.get(id=game_id)
-    # return render(request, 'games/detail.html', {
-    #     'game': requestedGame
-    # })
