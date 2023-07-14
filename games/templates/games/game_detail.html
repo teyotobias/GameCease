@@ -12,12 +12,10 @@
         <p>Released: {{ game.year_released }}</p>
         <p>Price: ${{ game.price }}</p>
     </div>
-    {% comment %}
     <div class="card-action">
       <a href="{% url 'games_update' game.id %}">Edit</a>
       <a href="{% url 'games_delete' game.id %}">Delete</a>
     </div>
-    {% endcomment %}
   </div>
 
 {% endblock %}
