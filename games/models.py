@@ -9,7 +9,7 @@ class Game(models.Model):
     description = models.TextField(max_length=250)
     year_released = models.IntegerField()
     price = models.DecimalField(max_digits=4, decimal_places=2)
-    # title_cover = models.ImageField(upload_to='game_covers/')
+    cover = models.ImageField(upload_to='images/', default='games/default.jpg')
 
 
 

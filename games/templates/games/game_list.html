@@ -5,15 +5,32 @@
 <h1>Game List</h1>
 
 {% for game in games %}
-<div class="card">
+<div class="card d-flex">
+    <a href="{% url 'games_detail' game.id %}">
+      <div class="card-content">
+        <span class="card-title">{{ game.title }}</span>
+        <p>Company: {{ game.company }}</p>
+        <p>Description: {{ game.description }}</p>
+        <p>Released: {{ game.year_released }}</p>
+        <p>price: ${{ game.price }}</p>
+      </div>
+      <aside>
+        <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;">
+      </aside>
+    </a>
+</div>
+<!-- <div class="card">
   <a href="{% url 'games_detail' game.id %}">
-    <div class="card-content">
+    <div class="card-content d-flex">
       <span class="card-title">{{ game.title }}</span>
       <p>Company: {{ game.company }}</p>
       <p>Description: {{ game.description }}</p>
       <p>Released: {{ game.year_released }}</p>
       <p>price: ${{ game.price }}</p>
+      <aside>
+        <img src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;">
+      </aside>
     </div>
   </a>
-</div>
+</div> -->
 {% endfor %} {% endblock %}
