@@ -10,9 +10,9 @@ class GameCreate(CreateView):
     model = Game
     fields = '__all__'
 
-# class GameUpdate(UpdateView):
-#     model = GameUpdate
-#     fields = [fields to be updated]
+class GameUpdate(UpdateView):
+    model = Game
+    fields = ['company', 'description', 'year_released']
 
 class GameDelete(DeleteView):
     model = Game
