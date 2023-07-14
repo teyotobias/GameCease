@@ -1,4 +1,3 @@
-
 from django.db import models
 from django.urls import reverse
 
@@ -11,10 +10,12 @@ class Game(models.Model):
     year_released = models.IntegerField()
     price = models.DecimalField(max_digits=4, decimal_places=2)
     # title_cover = models.ImageField(upload_to='game_covers/')
-    
+
+
 
     def __str__(self):
         return f'{self.title} ({self.id})'
     
+    
     def get_absolute_url(self):
-        return reverse('game_detail', kwargs={'pk': self.pk})
+        return reverse('games_detail', kwargs={'pk': self.pk})
