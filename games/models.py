@@ -10,6 +10,7 @@ class Game(models.Model):
     year_released = models.IntegerField()
     price = models.DecimalField(max_digits=4, decimal_places=2)
     cover = models.ImageField(upload_to='images/', default='games/default.jpg')
+    recommended = models.BooleanField(default=True)
 
 
 
