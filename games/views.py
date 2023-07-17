@@ -15,6 +15,7 @@ from django.shortcuts import get_object_or_404, redirect
 class GameCreate(LoginRequiredMixin, CreateView):
     model = Game
     fields = ['title', 'company', 'description', 'year_released', 'price', 'cover']
+    success_url = '/games/recommended'
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm
