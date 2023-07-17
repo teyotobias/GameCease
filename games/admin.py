@@ -5,3 +5,4 @@ from .models import UserProfile
 
 admin.site.register(Game)
 admin.site.register(UserProfile)
+
