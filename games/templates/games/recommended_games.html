@@ -1,22 +1,26 @@
-{% extends 'base.html' %} {% block content %}
 
-<h1>Coming Soon...</h1>
+{% extends 'base.html' %} 
 
-{% for game in games %}
-<div class="card d-flex">
-  <div class="card-content">
-    <span class="card-title">{{ game.title }}</span>
-    <p>Price: ${{ game.price }}</p>
-    <p>Company: {{ game.company }}</p>
+{% block content %}
+  <h1>Coming Soon...</h1>
+  <div class="row">
+    {% for game in games %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <a href="{% url 'games_detail' game.id %}">
+            <img class='card-img-top game-images' src="{{ game.cover.url }}" alt="{{ game.title }}">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{ game.title }}</h5>
+          </div>
+          <div class="card-footer">
+            <p class="card-text mb-0">${{ game.price }}</p>
+          </div>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:3 and not forloop.last %}
+        </div><div class="row">
+      {% endif %}
+    {% endfor %}
   </div>
-  <aside>
-    <img
-      class="game-images"
-      src="{{ game.cover.url }}"
-      alt="{{ game.title }}"
-      class="img-fluid"
-      style="max-width: 100px"
-    />
-  </aside>
-</div>
-{% endfor %} {% endblock %}
+{% endblock %}

@@ -1,0 +1,20 @@
+<!-- game index view-->
+
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Game List</h1>
+
+{% for game in games %}
+<a href="{% url 'game_detail' game.id %}">
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ game.title }}</span>
+        <p>Company: {{ game.company }}</p>
+        <p>Description: {{ game.description|linebreaks }}</p>
+        <p>Released: {{ game.year_released }}</p>
+        <p>price: ${{ game.price }}</p>
+    </div>
+  </div>
+</a>
+{% endfor %}
