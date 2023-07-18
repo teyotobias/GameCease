@@ -11,7 +11,11 @@
             </div>
             <aside>
               <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;"> 
+<<<<<<< HEAD
               <a href="{% url 'remove_from_cart' game.id %}" class="btn btn-primary">Remove from cart</a>
+=======
+              <a href="{% url 'remove_from_cart' game.id %}">Remove from cart</a>
+>>>>>>> fc24d33 ( Css Changes)
             </aside>
         </li>
     {% empty %}
