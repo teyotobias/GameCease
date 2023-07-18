@@ -10,7 +10,7 @@
                 <p>Price: ${{ game.price }}</p>
             </div>
             <aside>
-              <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;">
+              <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;"> 
               <a href="{% url 'remove_from_cart' game.id %}">Remove from cart</a>
             </aside>
         </li>
