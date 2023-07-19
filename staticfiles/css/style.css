@@ -2,17 +2,50 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+    background-color: rgb(52, 54, 66);
+    color: rgb(226, 233, 240)
+}
   
 main {
     flex: 1 0 auto;
 }
 
+nav {
+    background-color: rgb(16, 16, 15);
+}
 
-
+.custom-icon {
+    font-size: 33px; 
+  }
+  
+.game-images {
+    object-fit: contain;
+    height: 200px; 
+  }
+  
+  
 footer.page-footer {
     padding-top: 0;
     text-align: right;
+    background-color: rgb(16, 16, 15);
+    color: rgb(226, 233, 240)
 }
 
+.game-title {
+    color: #89ABE3; 
+    font-family: 'Merriweather', serif;
+}
 
+  
+.cease-title {
+    color: #EA738D; 
+    font-family: 'Roboto Slab', serif;
+}
+
+.right {
+    font-family: 'Merriweather', serif;
+}
+
+nav ul a {
+    color: rgb(226, 233, 240)
+}
