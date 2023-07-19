@@ -17,7 +17,10 @@ nav {
 .custom-icon {
     font-size: 33px; 
   }
-  
+
+.modal-body {
+    color: black
+}
 .game-images {
     object-fit: contain;
     height: 200px; 
