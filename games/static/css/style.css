@@ -9,6 +9,21 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+nav {
+    background-color: rgb(16, 16, 15);
+}
+
+.custom-icon {
+    font-size: 33px; 
+  }
+  
+.game-images {
+    object-fit: contain;
+    height: 200px; 
+  }
+  
+  
 footer.page-footer {
     padding-top: 0;
     text-align: right;
