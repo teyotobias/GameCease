@@ -15,6 +15,12 @@ urlpatterns = [
     path('games/<int:pk>/delete/', views.GameDelete.as_view(), name='games_delete'),
     path('games/recommended/', views.RecommendedGamesList.as_view(), name='recommended_games'),
     path('games/not_recommended/', views.NotRecommendedGamesList.as_view(), name='not_recommended_games'),
+    path('add_to_cart/<int:game_id>/', views.add_to_cart, name='add_to_cart'),
+    path('remove_from_cart/<int:game_id>/', views.remove_from_cart, name='remove_from_cart'),
+    path('purchase/', views.purchase, name='purchase'),
+    path('cart/', views.display_cart, name='display_cart'),
+    path('thank_you/', views.thank_you, name='thank_you'),
+
 ]
 
 

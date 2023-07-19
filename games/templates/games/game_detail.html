@@ -12,11 +12,12 @@
         <p>Released: {{ game.year_released }}</p>
         <p>Price: ${{ game.price }}</p>
     </div>
+    <aside>
+      <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;">
+    </aside>
     <div class="card-action">
-      <a href="{% url 'games_update' game.id %}">Edit</a>
-      <a href="{% url 'games_delete' game.id %}">Delete</a>
+      <a href="{% url 'add_to_cart' game.id %}">Add to cart</a>
     </div>
   </div>
 
 {% endblock %}
-
