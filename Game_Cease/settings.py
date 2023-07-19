@@ -12,8 +12,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from dotenv import load_dotenv #for deployment
+from environs import Env
 import os #for deployment
+import dj_database_url
 
+env = Env()
+env.read_env()
 
 load_dotenv() #for deployment
 
@@ -30,8 +34,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY') #hidden for deployment
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = []
-CSRF_TRUSTED_ORIGINS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'game-cease.fly.dev']
+CSRF_TRUSTED_ORIGINS = ['https://game-cease.fly.dev']
 
 LOGIN_URL = 'login'
 
@@ -46,11 +50,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic', # whitenoise
     'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #whitenoise
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -88,11 +94,17 @@ WSGI_APPLICATION = 'Game_Cease.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        # set up your database for your personal config
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
+    # 'default': {
+    #     'default': dj_database_url.config(
+    #         default='postgres://postgres:lkuElYXnrgdD3LB@game-cease-db.flycast:5432'
+    #     )
+    #     # 'NAME': os.environ.get('DB_NAME'),
+    #     # # set up your database for your personal config
+    # }
+    # "default": env.dj_db_url("DATABASE_URL", default="sqlite://db.sqlite3"),
 }
 
 
@@ -129,9 +141,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 STATIC_URL = '/static/'
-
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
