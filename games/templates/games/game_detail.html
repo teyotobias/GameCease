@@ -1,0 +1,23 @@
+<!-- game detail page goes here-->
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Game Details</h1>
+
+  <div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ game.title }}</span>
+        <p>Company: {{ game.company }}</p>
+        <p>Description: {{ game.description }}</p>
+        <p>Released: {{ game.year_released }}</p>
+        <p>Price: ${{ game.price }}</p>
+    </div>
+    <aside>
+      <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;">
+    </aside>
+    <div class="card-action">
+      <a href="{% url 'add_to_cart' game.id %}">Add to cart</a>
+    </div>
+  </div>
+
+{% endblock %}

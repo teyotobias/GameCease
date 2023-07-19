@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Thank you for shopping at GameCease!</h2>
+  <p>Your purchases will arrive soon. Here's a summary of your order:</p>
+  <ul>
+    {% for game in purchased_games %}
+    <li>{{ game.title }}: ${{ game.price }}</li>
+    {% endfor %}
+  </ul>
+  <p><strong>Total cost:</strong> ${{ total_cost }}</p>
+{% endblock %}

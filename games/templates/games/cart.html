@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Your Cart</h2>
+    <ul>
+    {% for game in cart %}
+        <li>
+            <div class="card-content">
+                <span class="card-title">{{ game.title }}</span>
+                <p>Price: ${{ game.price }}</p>
+            </div>
+            <aside>
+              <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;">
+              <a href="{% url 'remove_from_cart' game.id %}">Remove from cart</a>
+            </aside>
+        </li>
+    {% empty %}
+        <li>Your cart is empty</li>
+    {% endfor %}
+    </ul>
+    <h2>Total Cost: ${{ total_cost }}</h2>
+    <a href="{% url 'purchase' %}">Purchase</a>
+{% endblock %}
