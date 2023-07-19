@@ -9,7 +9,6 @@ body {
 main {
     flex: 1 0 auto;
 }
-<<<<<<< HEAD
 
 nav {
     background-color: rgb(16, 16, 15);
@@ -25,8 +24,6 @@ nav {
   }
   
   
-=======
->>>>>>> fc24d33 ( Css Changes)
 footer.page-footer {
     padding-top: 0;
     text-align: right;

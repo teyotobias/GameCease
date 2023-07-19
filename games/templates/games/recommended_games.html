@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %} 
 
 {% block content %}
@@ -6,9 +7,7 @@
     {% for game in games %}
       <div class="col-md-4 mb-4">
         <div class="card h-100">
-          <a href="{% url 'games_detail' game.id %}">
-            <img class='card-img-top game-images' src="{{ game.cover.url }}" alt="{{ game.title }}">
-          </a>
+          <img class='card-img-top game-images' src="{{ game.cover.url }}" alt="{{ game.title }}">
           <div class="card-body">
             <h5 class="card-title">{{ game.title }}</h5>
           </div>
@@ -17,10 +16,9 @@
           </div>
         </div>
       </div>
-      <aside>
-        <img class='game-images' src="{{ game.cover.url }}" alt="{{ game.title }}" class="img-fluid" style="max-width: 100px;">
-      </aside>
-    </a>
-</div>
-{% endfor %} 
+      {% if forloop.counter|divisibleby:3 and not forloop.last %}
+        </div><div class="row">
+      {% endif %}
+    {% endfor %}
+  </div>
 {% endblock %}
