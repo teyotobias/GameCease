@@ -3,13 +3,16 @@ Introducing GameCease, your one-stop website for community-sourced game recommen
 
 ## Hosted App
 Access the hosted app by visiting the following link: (https://game-cease.fly.dev)
+
 <img width="1496" alt="Screenshot 2023-08-04 at 17 12 21" src="https://github.com/teyotobias/GameCease/assets/112126540/a09b66c4-a027-4a95-a36f-71038ab99668">
+<img width="1496" alt="Screenshot 2023-08-04 at 17 16 50" src="https://github.com/teyotobias/GameCease/assets/112126540/5533219a-3ac1-4e63-809a-c84a5389ef84">
+<img width="1496" alt="Screenshot 2023-08-04 at 17 17 20" src="https://github.com/teyotobias/GameCease/assets/112126540/88e377ea-0179-4dd2-a1fe-a5c2dbf117e2">
 <img width="1496" alt="Screenshot 2023-08-04 at 17 14 09" src="https://github.com/teyotobias/GameCease/assets/112126540/84d24a40-838e-43d7-b432-af13b8e14f20">
+<img width="1496" alt="Screenshot 2023-08-04 at 17 16 12" src="https://github.com/teyotobias/GameCease/assets/112126540/2db33d9b-b669-41d7-9275-6061448335bf">
 <img width="1496" alt="Screenshot 2023-08-04 at 17 15 01" src="https://github.com/teyotobias/GameCease/assets/112126540/1abf2de4-a2fa-47f6-b2bc-a92c28747f55">
 <img width="1496" alt="Screenshot 2023-08-04 at 17 15 29" src="https://github.com/teyotobias/GameCease/assets/112126540/9c6bee28-b83e-4ca1-96eb-a1dd2d9b70e6">
 <img width="1496" alt="Screenshot 2023-08-04 at 17 16 12" src="https://github.com/teyotobias/GameCease/assets/112126540/2db33d9b-b669-41d7-9275-6061448335bf">
-<img width="1496" alt="Screenshot 2023-08-04 at 17 16 50" src="https://github.com/teyotobias/GameCease/assets/112126540/5533219a-3ac1-4e63-809a-c84a5389ef84">
-<img width="1496" alt="Screenshot 2023-08-04 at 17 17 20" src="https://github.com/teyotobias/GameCease/assets/112126540/88e377ea-0179-4dd2-a1fe-a5c2dbf117e2">
+
 
 ## Features:
 * Full CRUD functionalities
