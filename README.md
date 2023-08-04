@@ -1,4 +1,4 @@
-## Django video game e-commerce site
+## Django/PostgreSQL Ecommerce Platform for Video Games
 Introducing GameCease, your one-stop website for community-sourced game recommendations and in-stock purchases, offering the ultimate gaming experience reminiscent of Amazon's convenience. 🎮🛒
 
 ## Come see our website!
@@ -8,7 +8,7 @@ https://game-cease.fly.dev
 * Python
 * Django
 * Bootstrap
-* Github
+* Git
 
 ## Our approach:
 1. Worked together on initial set ups and CRUD routing
