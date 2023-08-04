@@ -10,6 +10,9 @@ Access the hosted app by visiting the following link: (https://game-cease.fly.de
 <img width="1496" alt="Screenshot 2023-08-04 at 17 14 09" src="https://github.com/teyotobias/GameCease/assets/112126540/84d24a40-838e-43d7-b432-af13b8e14f20">
 <img width="1496" alt="Screenshot 2023-08-04 at 17 16 12" src="https://github.com/teyotobias/GameCease/assets/112126540/2db33d9b-b669-41d7-9275-6061448335bf">
 <img width="1496" alt="Screenshot 2023-08-04 at 17 52 50" src="https://github.com/teyotobias/GameCease/assets/112126540/e00db249-0f05-4715-9f32-9d06ddf20751">
+<img width="1496" alt="Screenshot 2023-08-04 at 17 54 05" src="https://github.com/teyotobias/GameCease/assets/112126540/0f1d42b1-2e9d-45be-8d11-d19d5a2edaf6">
+
+
 
 <img width="1496" alt="Screenshot 2023-08-04 at 17 15 01" src="https://github.com/teyotobias/GameCease/assets/112126540/1abf2de4-a2fa-47f6-b2bc-a92c28747f55">
 
